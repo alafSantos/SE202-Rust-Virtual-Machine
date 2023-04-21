@@ -1,0 +1,216 @@
+  0000   loadimm r2 <- #4096
+  0004   loadimm r3 <- #4
+  0008   sub r2 <- r2 - r3
+  0012   store [r2] <- r10
+  0015   loadimm r3 <- #4
+  0019   sub r2 <- r2 - r3
+  0023   store [r2] <- r11
+  0026   loadimm r10 <- #str_1
+  0030   loadimm r11 <- #39
+  0034   loadimm r3 <- #4
+  0038   sub r2 <- r2 - r3
+  0042   loadimm r3 <- #return_from_print_1
+  0046   store [r2] <- r3
+  0049   loadimm r0 <- #print
+return_from_print_1:
+  0053   loadimm r3 <- #-4
+  0057   sub r2 <- r2 - r3
+  0061   loadimm r3 <- #4
+  0065   sub r3 <- r2 - r3
+  0069   load r11 <- [r3]
+  0072   loadimm r3 <- #-4
+  0076   sub r2 <- r2 - r3
+  0080   loadimm r3 <- #4
+  0084   sub r3 <- r2 - r3
+  0088   load r10 <- [r3]
+loop:
+  0091   loadimm r3 <- #-1
+  0095   sub r7 <- r7 - r3
+  0099   loadimm r3 <- #4
+  0103   sub r2 <- r2 - r3
+  0107   store [r2] <- r10
+  0110   loadimm r3 <- #4
+  0114   sub r2 <- r2 - r3
+  0118   store [r2] <- r11
+  0121   loadimm r10 <- #str_2
+  0125   loadimm r11 <- #5
+  0129   loadimm r3 <- #4
+  0133   sub r2 <- r2 - r3
+  0137   loadimm r3 <- #return_from_print_2
+  0141   store [r2] <- r3
+  0144   loadimm r0 <- #print
+return_from_print_2:
+  0148   loadimm r3 <- #-4
+  0152   sub r2 <- r2 - r3
+  0156   loadimm r3 <- #4
+  0160   sub r3 <- r2 - r3
+  0164   load r11 <- [r3]
+  0167   loadimm r3 <- #-4
+  0171   sub r2 <- r2 - r3
+  0175   loadimm r3 <- #4
+  0179   sub r3 <- r2 - r3
+  0183   load r10 <- [r3]
+  0186   out_number r7
+  0188   loadimm r3 <- #4
+  0192   sub r2 <- r2 - r3
+  0196   store [r2] <- r10
+  0199   loadimm r3 <- #4
+  0203   sub r2 <- r2 - r3
+  0207   store [r2] <- r11
+  0210   loadimm r10 <- #str_3
+  0214   loadimm r11 <- #4
+  0218   loadimm r3 <- #4
+  0222   sub r2 <- r2 - r3
+  0226   loadimm r3 <- #return_from_print_3
+  0230   store [r2] <- r3
+  0233   loadimm r0 <- #print
+return_from_print_3:
+  0237   loadimm r3 <- #-4
+  0241   sub r2 <- r2 - r3
+  0245   loadimm r3 <- #4
+  0249   sub r3 <- r2 - r3
+  0253   load r11 <- [r3]
+  0256   loadimm r3 <- #-4
+  0260   sub r2 <- r2 - r3
+  0264   loadimm r3 <- #4
+  0268   sub r3 <- r2 - r3
+  0272   load r10 <- [r3]
+  0275   move r10 <- r7 if r0 != 0
+  0279   loadimm r3 <- #4
+  0283   sub r2 <- r2 - r3
+  0287   loadimm r3 <- #return_from_fact_1
+  0291   store [r2] <- r3
+  0294   loadimm r0 <- #fact
+return_from_fact_1:
+  0298   out_number r11
+  0300   loadimm r3 <- #4
+  0304   sub r2 <- r2 - r3
+  0308   store [r2] <- r10
+  0311   loadimm r3 <- #4
+  0315   sub r2 <- r2 - r3
+  0319   store [r2] <- r11
+  0322   loadimm r10 <- #str_4
+  0326   loadimm r11 <- #1
+  0330   loadimm r3 <- #4
+  0334   sub r2 <- r2 - r3
+  0338   loadimm r3 <- #return_from_print_4
+  0342   store [r2] <- r3
+  0345   loadimm r0 <- #print
+return_from_print_4:
+  0349   loadimm r3 <- #-4
+  0353   sub r2 <- r2 - r3
+  0357   loadimm r3 <- #4
+  0361   sub r3 <- r2 - r3
+  0365   load r11 <- [r3]
+  0368   loadimm r3 <- #-4
+  0372   sub r2 <- r2 - r3
+  0376   loadimm r3 <- #4
+  0380   sub r3 <- r2 - r3
+  0384   load r10 <- [r3]
+  0387   loadimm r4 <- #10
+  0391   sub r4 <- r7 - r4
+  0395   loadimm r5 <- #ite_then_1
+  0399   move r0 <- r5 if r4 != 0
+  0403   loadimm r0 <- #ite_end_1
+ite_then_1:
+  0407   loadimm r0 <- #loop
+ite_end_1:
+  0411   loadimm r3 <- #4
+  0415   sub r2 <- r2 - r3
+  0419   store [r2] <- r10
+  0422   loadimm r3 <- #4
+  0426   sub r2 <- r2 - r3
+  0430   store [r2] <- r11
+  0433   loadimm r10 <- #str_5
+  0437   loadimm r11 <- #10
+  0441   loadimm r3 <- #4
+  0445   sub r2 <- r2 - r3
+  0449   loadimm r3 <- #return_from_print_5
+  0453   store [r2] <- r3
+  0456   loadimm r0 <- #print
+return_from_print_5:
+  0460   loadimm r3 <- #-4
+  0464   sub r2 <- r2 - r3
+  0468   loadimm r3 <- #4
+  0472   sub r3 <- r2 - r3
+  0476   load r11 <- [r3]
+  0479   loadimm r3 <- #-4
+  0483   sub r2 <- r2 - r3
+  0487   loadimm r3 <- #4
+  0491   sub r3 <- r2 - r3
+  0495   load r10 <- [r3]
+  0498   exit
+mult:
+  0499   sub r13 <- r1 - r11
+  0503   move r14 <- r12 if r0 != 0
+mult_loop:
+  0507   loadimm r8 <- #1
+  0511   sub r8 <- r14 - r8
+  0515   loadimm r9 <- #ite_then_2
+  0519   move r0 <- r9 if r8 != 0
+  0523   loadimm r0 <- #ite_end_2
+ite_then_2:
+  0527   sub r11 <- r11 - r13
+  0531   loadimm r3 <- #1
+  0535   sub r14 <- r14 - r3
+  0539   loadimm r0 <- #mult_loop
+ite_end_2:
+  0543   loadimm r3 <- #-4
+  0547   sub r2 <- r2 - r3
+  0551   loadimm r3 <- #4
+  0555   sub r3 <- r2 - r3
+  0559   load r0 <- [r3]
+fact:
+  0562   loadimm r11 <- #1
+fact_loop:
+  0566   loadimm r8 <- #1
+  0570   sub r8 <- r10 - r8
+  0574   loadimm r9 <- #ite_then_3
+  0578   move r0 <- r9 if r8 != 0
+  0582   loadimm r0 <- #ite_end_3
+ite_then_3:
+  0586   move r12 <- r10 if r0 != 0
+  0590   loadimm r3 <- #4
+  0594   sub r2 <- r2 - r3
+  0598   loadimm r3 <- #return_from_mult_1
+  0602   store [r2] <- r3
+  0605   loadimm r0 <- #mult
+return_from_mult_1:
+  0609   loadimm r3 <- #1
+  0613   sub r10 <- r10 - r3
+  0617   loadimm r0 <- #fact_loop
+ite_end_3:
+  0621   loadimm r3 <- #-4
+  0625   sub r2 <- r2 - r3
+  0629   loadimm r3 <- #4
+  0633   sub r3 <- r2 - r3
+  0637   load r0 <- [r3]
+print:
+print_loop_1:
+  0640   loadimm r8 <- #ite_then_4
+  0644   move r0 <- r8 if r11 != 0
+  0648   loadimm r0 <- #ite_end_4
+ite_then_4:
+  0652   load r3 <- [r10]
+  0655   out r3
+  0657   loadimm r3 <- #-1
+  0661   sub r10 <- r10 - r3
+  0665   loadimm r3 <- #1
+  0669   sub r11 <- r11 - r3
+  0673   loadimm r0 <- #print_loop_1
+ite_end_4:
+  0677   loadimm r3 <- #-4
+  0681   sub r2 <- r2 - r3
+  0685   loadimm r3 <- #4
+  0689   sub r3 <- r2 - r3
+  0693   load r0 <- [r3]
+str_1:
+  ???? b'I will compute some factorials for you\n'
+str_2:
+  ???? b'fact('
+str_3:
+  ???? b') = '
+str_4:
+  ???? b'\n'
+str_5:
+  ???? b"I'm done!\n"

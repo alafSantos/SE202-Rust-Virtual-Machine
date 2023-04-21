@@ -1,0 +1,15 @@
+  0000   loadimm r2 <- #4096
+  0004   loadimm r3 <- #4
+  0008   sub r2 <- r2 - r3
+  0012   loadimm r3 <- #return_from_myfunc_1
+  0016   store [r2] <- r3
+  0019   loadimm r0 <- #myfunc
+return_from_myfunc_1:
+  0023   exit
+myfunc:
+  0024   loadimm r10 <- #42
+  0028   loadimm r3 <- #-4
+  0032   sub r2 <- r2 - r3
+  0036   loadimm r3 <- #4
+  0040   sub r3 <- r2 - r3
+  0044   load r0 <- [r3]

@@ -1,0 +1,28 @@
+  0000   loadimm r2 <- #4096
+  0004   loadimm r3 <- #4
+  0008   sub r2 <- r2 - r3
+  0012   loadimm r3 <- #return_from_mult_1
+  0016   store [r2] <- r3
+  0019   loadimm r0 <- #mult
+return_from_mult_1:
+  0023   exit
+mult:
+  0024   sub r13 <- r1 - r11
+  0028   move r14 <- r12 if r0 != 0
+mult_loop:
+  0032   loadimm r8 <- #1
+  0036   sub r8 <- r14 - r8
+  0040   loadimm r9 <- #ite_then_1
+  0044   move r0 <- r9 if r8 != 0
+  0048   loadimm r0 <- #ite_end_1
+ite_then_1:
+  0052   sub r11 <- r11 - r13
+  0056   loadimm r3 <- #1
+  0060   sub r14 <- r14 - r3
+  0064   loadimm r0 <- #mult_loop
+ite_end_1:
+  0068   loadimm r3 <- #-4
+  0072   sub r2 <- r2 - r3
+  0076   loadimm r3 <- #4
+  0080   sub r3 <- r2 - r3
+  0084   load r0 <- [r3]

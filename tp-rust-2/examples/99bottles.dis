@@ -1,0 +1,377 @@
+  0000   loadimm r2 <- #4096
+  0004   loadimm r7 <- #99
+loop:
+  0008   loadimm r3 <- #4
+  0012   sub r2 <- r2 - r3
+  0016   loadimm r3 <- #return_from_ubottles_1
+  0020   store [r2] <- r3
+  0023   loadimm r0 <- #ubottles
+return_from_ubottles_1:
+  0027   loadimm r3 <- #4
+  0031   sub r2 <- r2 - r3
+  0035   store [r2] <- r10
+  0038   loadimm r3 <- #4
+  0042   sub r2 <- r2 - r3
+  0046   store [r2] <- r11
+  0049   loadimm r10 <- #str_1
+  0053   loadimm r11 <- #22
+  0057   loadimm r3 <- #4
+  0061   sub r2 <- r2 - r3
+  0065   loadimm r3 <- #return_from_print_1
+  0069   store [r2] <- r3
+  0072   loadimm r0 <- #print
+return_from_print_1:
+  0076   loadimm r3 <- #-4
+  0080   sub r2 <- r2 - r3
+  0084   loadimm r3 <- #4
+  0088   sub r3 <- r2 - r3
+  0092   load r11 <- [r3]
+  0095   loadimm r3 <- #-4
+  0099   sub r2 <- r2 - r3
+  0103   loadimm r3 <- #4
+  0107   sub r3 <- r2 - r3
+  0111   load r10 <- [r3]
+  0114   loadimm r3 <- #4
+  0118   sub r2 <- r2 - r3
+  0122   loadimm r3 <- #return_from_bottles_1
+  0126   store [r2] <- r3
+  0129   loadimm r0 <- #bottles
+return_from_bottles_1:
+  0133   loadimm r3 <- #4
+  0137   sub r2 <- r2 - r3
+  0141   store [r2] <- r10
+  0144   loadimm r3 <- #4
+  0148   sub r2 <- r2 - r3
+  0152   store [r2] <- r11
+  0155   loadimm r10 <- #str_2
+  0159   loadimm r11 <- #10
+  0163   loadimm r3 <- #4
+  0167   sub r2 <- r2 - r3
+  0171   loadimm r3 <- #return_from_print_2
+  0175   store [r2] <- r3
+  0178   loadimm r0 <- #print
+return_from_print_2:
+  0182   loadimm r3 <- #-4
+  0186   sub r2 <- r2 - r3
+  0190   loadimm r3 <- #4
+  0194   sub r3 <- r2 - r3
+  0198   load r11 <- [r3]
+  0201   loadimm r3 <- #-4
+  0205   sub r2 <- r2 - r3
+  0209   loadimm r3 <- #4
+  0213   sub r3 <- r2 - r3
+  0217   load r10 <- [r3]
+  0220   loadimm r4 <- #0
+  0224   sub r4 <- r7 - r4
+  0228   loadimm r5 <- #ite_then_1
+  0232   move r0 <- r5 if r4 != 0
+  0236   loadimm r0 <- #no_more_bottles
+  0240   loadimm r0 <- #ite_end_1
+ite_end_1:
+ite_then_1:
+  0244   loadimm r3 <- #4
+  0248   sub r2 <- r2 - r3
+  0252   store [r2] <- r10
+  0255   loadimm r3 <- #4
+  0259   sub r2 <- r2 - r3
+  0263   store [r2] <- r11
+  0266   loadimm r10 <- #str_3
+  0270   loadimm r11 <- #31
+  0274   loadimm r3 <- #4
+  0278   sub r2 <- r2 - r3
+  0282   loadimm r3 <- #return_from_print_3
+  0286   store [r2] <- r3
+  0289   loadimm r0 <- #print
+return_from_print_3:
+  0293   loadimm r3 <- #-4
+  0297   sub r2 <- r2 - r3
+  0301   loadimm r3 <- #4
+  0305   sub r3 <- r2 - r3
+  0309   load r11 <- [r3]
+  0312   loadimm r3 <- #-4
+  0316   sub r2 <- r2 - r3
+  0320   loadimm r3 <- #4
+  0324   sub r3 <- r2 - r3
+  0328   load r10 <- [r3]
+  0331   loadimm r3 <- #1
+  0335   sub r7 <- r7 - r3
+  0339   loadimm r3 <- #4
+  0343   sub r2 <- r2 - r3
+  0347   loadimm r3 <- #return_from_ubottles_2
+  0351   store [r2] <- r3
+  0354   loadimm r0 <- #ubottles
+return_from_ubottles_2:
+  0358   loadimm r3 <- #4
+  0362   sub r2 <- r2 - r3
+  0366   store [r2] <- r10
+  0369   loadimm r3 <- #4
+  0373   sub r2 <- r2 - r3
+  0377   store [r2] <- r11
+  0380   loadimm r10 <- #str_4
+  0384   loadimm r11 <- #25
+  0388   loadimm r3 <- #4
+  0392   sub r2 <- r2 - r3
+  0396   loadimm r3 <- #return_from_print_4
+  0400   store [r2] <- r3
+  0403   loadimm r0 <- #print
+return_from_print_4:
+  0407   loadimm r3 <- #-4
+  0411   sub r2 <- r2 - r3
+  0415   loadimm r3 <- #4
+  0419   sub r3 <- r2 - r3
+  0423   load r11 <- [r3]
+  0426   loadimm r3 <- #-4
+  0430   sub r2 <- r2 - r3
+  0434   loadimm r3 <- #4
+  0438   sub r3 <- r2 - r3
+  0442   load r10 <- [r3]
+  0445   loadimm r0 <- #loop
+no_more_bottles:
+  0449   loadimm r3 <- #4
+  0453   sub r2 <- r2 - r3
+  0457   store [r2] <- r10
+  0460   loadimm r3 <- #4
+  0464   sub r2 <- r2 - r3
+  0468   store [r2] <- r11
+  0471   loadimm r10 <- #str_5
+  0475   loadimm r11 <- #69
+  0479   loadimm r3 <- #4
+  0483   sub r2 <- r2 - r3
+  0487   loadimm r3 <- #return_from_print_5
+  0491   store [r2] <- r3
+  0494   loadimm r0 <- #print
+return_from_print_5:
+  0498   loadimm r3 <- #-4
+  0502   sub r2 <- r2 - r3
+  0506   loadimm r3 <- #4
+  0510   sub r3 <- r2 - r3
+  0514   load r11 <- [r3]
+  0517   loadimm r3 <- #-4
+  0521   sub r2 <- r2 - r3
+  0525   loadimm r3 <- #4
+  0529   sub r3 <- r2 - r3
+  0533   load r10 <- [r3]
+  0536   exit
+ubottles:
+  0537   loadimm r8 <- #1
+  0541   sub r8 <- r7 - r8
+  0545   loadimm r9 <- #ite_then_2
+  0549   move r0 <- r9 if r8 != 0
+  0553   loadimm r3 <- #4
+  0557   sub r2 <- r2 - r3
+  0561   store [r2] <- r10
+  0564   loadimm r3 <- #4
+  0568   sub r2 <- r2 - r3
+  0572   store [r2] <- r11
+  0575   loadimm r10 <- #str_6
+  0579   loadimm r11 <- #10
+  0583   loadimm r3 <- #4
+  0587   sub r2 <- r2 - r3
+  0591   loadimm r3 <- #return_from_print_6
+  0595   store [r2] <- r3
+  0598   loadimm r0 <- #print
+return_from_print_6:
+  0602   loadimm r3 <- #-4
+  0606   sub r2 <- r2 - r3
+  0610   loadimm r3 <- #4
+  0614   sub r3 <- r2 - r3
+  0618   load r11 <- [r3]
+  0621   loadimm r3 <- #-4
+  0625   sub r2 <- r2 - r3
+  0629   loadimm r3 <- #4
+  0633   sub r3 <- r2 - r3
+  0637   load r10 <- [r3]
+  0640   loadimm r0 <- #ite_end_2
+ite_then_2:
+  0644   loadimm r8 <- #ite_then_3
+  0648   move r0 <- r8 if r7 != 0
+  0652   loadimm r3 <- #4
+  0656   sub r2 <- r2 - r3
+  0660   store [r2] <- r10
+  0663   loadimm r3 <- #4
+  0667   sub r2 <- r2 - r3
+  0671   store [r2] <- r11
+  0674   loadimm r10 <- #str_7
+  0678   loadimm r11 <- #15
+  0682   loadimm r3 <- #4
+  0686   sub r2 <- r2 - r3
+  0690   loadimm r3 <- #return_from_print_7
+  0694   store [r2] <- r3
+  0697   loadimm r0 <- #print
+return_from_print_7:
+  0701   loadimm r3 <- #-4
+  0705   sub r2 <- r2 - r3
+  0709   loadimm r3 <- #4
+  0713   sub r3 <- r2 - r3
+  0717   load r11 <- [r3]
+  0720   loadimm r3 <- #-4
+  0724   sub r2 <- r2 - r3
+  0728   loadimm r3 <- #4
+  0732   sub r3 <- r2 - r3
+  0736   load r10 <- [r3]
+  0739   loadimm r0 <- #ite_end_3
+ite_then_3:
+  0743   out_number r7
+  0745   loadimm r3 <- #4
+  0749   sub r2 <- r2 - r3
+  0753   store [r2] <- r10
+  0756   loadimm r3 <- #4
+  0760   sub r2 <- r2 - r3
+  0764   store [r2] <- r11
+  0767   loadimm r10 <- #str_8
+  0771   loadimm r11 <- #8
+  0775   loadimm r3 <- #4
+  0779   sub r2 <- r2 - r3
+  0783   loadimm r3 <- #return_from_print_8
+  0787   store [r2] <- r3
+  0790   loadimm r0 <- #print
+return_from_print_8:
+  0794   loadimm r3 <- #-4
+  0798   sub r2 <- r2 - r3
+  0802   loadimm r3 <- #4
+  0806   sub r3 <- r2 - r3
+  0810   load r11 <- [r3]
+  0813   loadimm r3 <- #-4
+  0817   sub r2 <- r2 - r3
+  0821   loadimm r3 <- #4
+  0825   sub r3 <- r2 - r3
+  0829   load r10 <- [r3]
+ite_end_2:
+ite_end_3:
+  0832   loadimm r3 <- #-4
+  0836   sub r2 <- r2 - r3
+  0840   loadimm r3 <- #4
+  0844   sub r3 <- r2 - r3
+  0848   load r0 <- [r3]
+bottles:
+  0851   loadimm r8 <- #1
+  0855   sub r8 <- r7 - r8
+  0859   loadimm r9 <- #ite_then_4
+  0863   move r0 <- r9 if r8 != 0
+  0867   loadimm r3 <- #4
+  0871   sub r2 <- r2 - r3
+  0875   store [r2] <- r10
+  0878   loadimm r3 <- #4
+  0882   sub r2 <- r2 - r3
+  0886   store [r2] <- r11
+  0889   loadimm r10 <- #str_9
+  0893   loadimm r11 <- #10
+  0897   loadimm r3 <- #4
+  0901   sub r2 <- r2 - r3
+  0905   loadimm r3 <- #return_from_print_9
+  0909   store [r2] <- r3
+  0912   loadimm r0 <- #print
+return_from_print_9:
+  0916   loadimm r3 <- #-4
+  0920   sub r2 <- r2 - r3
+  0924   loadimm r3 <- #4
+  0928   sub r3 <- r2 - r3
+  0932   load r11 <- [r3]
+  0935   loadimm r3 <- #-4
+  0939   sub r2 <- r2 - r3
+  0943   loadimm r3 <- #4
+  0947   sub r3 <- r2 - r3
+  0951   load r10 <- [r3]
+  0954   loadimm r0 <- #ite_end_4
+ite_then_4:
+  0958   loadimm r8 <- #ite_then_5
+  0962   move r0 <- r8 if r7 != 0
+  0966   loadimm r3 <- #4
+  0970   sub r2 <- r2 - r3
+  0974   store [r2] <- r10
+  0977   loadimm r3 <- #4
+  0981   sub r2 <- r2 - r3
+  0985   store [r2] <- r11
+  0988   loadimm r10 <- #str_10
+  0992   loadimm r11 <- #15
+  0996   loadimm r3 <- #4
+  1000   sub r2 <- r2 - r3
+  1004   loadimm r3 <- #return_from_print_10
+  1008   store [r2] <- r3
+  1011   loadimm r0 <- #print
+return_from_print_10:
+  1015   loadimm r3 <- #-4
+  1019   sub r2 <- r2 - r3
+  1023   loadimm r3 <- #4
+  1027   sub r3 <- r2 - r3
+  1031   load r11 <- [r3]
+  1034   loadimm r3 <- #-4
+  1038   sub r2 <- r2 - r3
+  1042   loadimm r3 <- #4
+  1046   sub r3 <- r2 - r3
+  1050   load r10 <- [r3]
+  1053   loadimm r0 <- #ite_end_5
+ite_then_5:
+  1057   out_number r7
+  1059   loadimm r3 <- #4
+  1063   sub r2 <- r2 - r3
+  1067   store [r2] <- r10
+  1070   loadimm r3 <- #4
+  1074   sub r2 <- r2 - r3
+  1078   store [r2] <- r11
+  1081   loadimm r10 <- #str_11
+  1085   loadimm r11 <- #8
+  1089   loadimm r3 <- #4
+  1093   sub r2 <- r2 - r3
+  1097   loadimm r3 <- #return_from_print_11
+  1101   store [r2] <- r3
+  1104   loadimm r0 <- #print
+return_from_print_11:
+  1108   loadimm r3 <- #-4
+  1112   sub r2 <- r2 - r3
+  1116   loadimm r3 <- #4
+  1120   sub r3 <- r2 - r3
+  1124   load r11 <- [r3]
+  1127   loadimm r3 <- #-4
+  1131   sub r2 <- r2 - r3
+  1135   loadimm r3 <- #4
+  1139   sub r3 <- r2 - r3
+  1143   load r10 <- [r3]
+ite_end_4:
+ite_end_5:
+  1146   loadimm r3 <- #-4
+  1150   sub r2 <- r2 - r3
+  1154   loadimm r3 <- #4
+  1158   sub r3 <- r2 - r3
+  1162   load r0 <- [r3]
+print:
+print_loop_1:
+  1165   loadimm r8 <- #ite_then_6
+  1169   move r0 <- r8 if r11 != 0
+  1173   loadimm r0 <- #ite_end_6
+ite_then_6:
+  1177   load r3 <- [r10]
+  1180   out r3
+  1182   loadimm r3 <- #-1
+  1186   sub r10 <- r10 - r3
+  1190   loadimm r3 <- #1
+  1194   sub r11 <- r11 - r3
+  1198   loadimm r0 <- #print_loop_1
+ite_end_6:
+  1202   loadimm r3 <- #-4
+  1206   sub r2 <- r2 - r3
+  1210   loadimm r3 <- #4
+  1214   sub r3 <- r2 - r3
+  1218   load r0 <- [r3]
+str_1:
+  ???? b' of beer on the wall, '
+str_2:
+  ???? b' of beer.\n'
+str_3:
+  ???? b'Take one down, pass it around, '
+str_4:
+  ???? b' of beer on the wall...\n\n'
+str_5:
+  ???? b'Go to the store and buy some more, 99 bottles of beer on the wall...\n'
+str_6:
+  ???? b'One bottle'
+str_7:
+  ???? b'No more bottles'
+str_8:
+  ???? b' bottles'
+str_9:
+  ???? b'one bottle'
+str_10:
+  ???? b'no more bottles'
+str_11:
+  ???? b' bottles'

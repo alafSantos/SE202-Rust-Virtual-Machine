@@ -1,0 +1,235 @@
+  0000   loadimm r2 <- #4096
+  0004   loadimm r3 <- #4
+  0008   sub r2 <- r2 - r3
+  0012   store [r2] <- r10
+  0015   loadimm r3 <- #4
+  0019   sub r2 <- r2 - r3
+  0023   store [r2] <- r11
+  0026   loadimm r10 <- #str_1
+  0030   loadimm r11 <- #46
+  0034   loadimm r3 <- #4
+  0038   sub r2 <- r2 - r3
+  0042   loadimm r3 <- #return_from_print_1
+  0046   store [r2] <- r3
+  0049   loadimm r0 <- #print
+return_from_print_1:
+  0053   loadimm r3 <- #-4
+  0057   sub r2 <- r2 - r3
+  0061   loadimm r3 <- #4
+  0065   sub r3 <- r2 - r3
+  0069   load r11 <- [r3]
+  0072   loadimm r3 <- #-4
+  0076   sub r2 <- r2 - r3
+  0080   loadimm r3 <- #4
+  0084   sub r3 <- r2 - r3
+  0088   load r10 <- [r3]
+loop:
+  0091   loadimm r3 <- #-1
+  0095   sub r7 <- r7 - r3
+  0099   loadimm r3 <- #4
+  0103   sub r2 <- r2 - r3
+  0107   store [r2] <- r10
+  0110   loadimm r3 <- #4
+  0114   sub r2 <- r2 - r3
+  0118   store [r2] <- r11
+  0121   loadimm r10 <- #str_2
+  0125   loadimm r11 <- #5
+  0129   loadimm r3 <- #4
+  0133   sub r2 <- r2 - r3
+  0137   loadimm r3 <- #return_from_print_2
+  0141   store [r2] <- r3
+  0144   loadimm r0 <- #print
+return_from_print_2:
+  0148   loadimm r3 <- #-4
+  0152   sub r2 <- r2 - r3
+  0156   loadimm r3 <- #4
+  0160   sub r3 <- r2 - r3
+  0164   load r11 <- [r3]
+  0167   loadimm r3 <- #-4
+  0171   sub r2 <- r2 - r3
+  0175   loadimm r3 <- #4
+  0179   sub r3 <- r2 - r3
+  0183   load r10 <- [r3]
+  0186   out_number r7
+  0188   loadimm r3 <- #4
+  0192   sub r2 <- r2 - r3
+  0196   store [r2] <- r10
+  0199   loadimm r3 <- #4
+  0203   sub r2 <- r2 - r3
+  0207   store [r2] <- r11
+  0210   loadimm r10 <- #str_3
+  0214   loadimm r11 <- #4
+  0218   loadimm r3 <- #4
+  0222   sub r2 <- r2 - r3
+  0226   loadimm r3 <- #return_from_print_3
+  0230   store [r2] <- r3
+  0233   loadimm r0 <- #print
+return_from_print_3:
+  0237   loadimm r3 <- #-4
+  0241   sub r2 <- r2 - r3
+  0245   loadimm r3 <- #4
+  0249   sub r3 <- r2 - r3
+  0253   load r11 <- [r3]
+  0256   loadimm r3 <- #-4
+  0260   sub r2 <- r2 - r3
+  0264   loadimm r3 <- #4
+  0268   sub r3 <- r2 - r3
+  0272   load r10 <- [r3]
+  0275   move r10 <- r7 if r0 != 0
+  0279   loadimm r3 <- #4
+  0283   sub r2 <- r2 - r3
+  0287   loadimm r3 <- #return_from_fibo_1
+  0291   store [r2] <- r3
+  0294   loadimm r0 <- #fibo
+return_from_fibo_1:
+  0298   out_number r11
+  0300   loadimm r3 <- #4
+  0304   sub r2 <- r2 - r3
+  0308   store [r2] <- r10
+  0311   loadimm r3 <- #4
+  0315   sub r2 <- r2 - r3
+  0319   store [r2] <- r11
+  0322   loadimm r10 <- #str_4
+  0326   loadimm r11 <- #1
+  0330   loadimm r3 <- #4
+  0334   sub r2 <- r2 - r3
+  0338   loadimm r3 <- #return_from_print_4
+  0342   store [r2] <- r3
+  0345   loadimm r0 <- #print
+return_from_print_4:
+  0349   loadimm r3 <- #-4
+  0353   sub r2 <- r2 - r3
+  0357   loadimm r3 <- #4
+  0361   sub r3 <- r2 - r3
+  0365   load r11 <- [r3]
+  0368   loadimm r3 <- #-4
+  0372   sub r2 <- r2 - r3
+  0376   loadimm r3 <- #4
+  0380   sub r3 <- r2 - r3
+  0384   load r10 <- [r3]
+  0387   loadimm r4 <- #23
+  0391   sub r4 <- r7 - r4
+  0395   loadimm r5 <- #ite_then_1
+  0399   move r0 <- r5 if r4 != 0
+  0403   loadimm r0 <- #ite_end_1
+ite_then_1:
+  0407   loadimm r0 <- #loop
+ite_end_1:
+  0411   loadimm r3 <- #4
+  0415   sub r2 <- r2 - r3
+  0419   store [r2] <- r10
+  0422   loadimm r3 <- #4
+  0426   sub r2 <- r2 - r3
+  0430   store [r2] <- r11
+  0433   loadimm r10 <- #str_5
+  0437   loadimm r11 <- #10
+  0441   loadimm r3 <- #4
+  0445   sub r2 <- r2 - r3
+  0449   loadimm r3 <- #return_from_print_5
+  0453   store [r2] <- r3
+  0456   loadimm r0 <- #print
+return_from_print_5:
+  0460   loadimm r3 <- #-4
+  0464   sub r2 <- r2 - r3
+  0468   loadimm r3 <- #4
+  0472   sub r3 <- r2 - r3
+  0476   load r11 <- [r3]
+  0479   loadimm r3 <- #-4
+  0483   sub r2 <- r2 - r3
+  0487   loadimm r3 <- #4
+  0491   sub r3 <- r2 - r3
+  0495   load r10 <- [r3]
+  0498   exit
+fibo:
+  0499   loadimm r8 <- #ite_then_2
+  0503   move r0 <- r8 if r10 != 0
+  0507   loadimm r11 <- #0
+  0511   loadimm r3 <- #-4
+  0515   sub r2 <- r2 - r3
+  0519   loadimm r3 <- #4
+  0523   sub r3 <- r2 - r3
+  0527   load r0 <- [r3]
+  0530   loadimm r0 <- #ite_end_2
+ite_end_2:
+ite_then_2:
+  0534   loadimm r8 <- #1
+  0538   sub r8 <- r10 - r8
+  0542   loadimm r9 <- #ite_then_3
+  0546   move r0 <- r9 if r8 != 0
+  0550   loadimm r11 <- #1
+  0554   loadimm r3 <- #-4
+  0558   sub r2 <- r2 - r3
+  0562   loadimm r3 <- #4
+  0566   sub r3 <- r2 - r3
+  0570   load r0 <- [r3]
+  0573   loadimm r0 <- #ite_end_3
+ite_then_3:
+  0577   loadimm r3 <- #1
+  0581   sub r10 <- r10 - r3
+  0585   loadimm r3 <- #4
+  0589   sub r2 <- r2 - r3
+  0593   store [r2] <- r10
+  0596   loadimm r3 <- #4
+  0600   sub r2 <- r2 - r3
+  0604   loadimm r3 <- #return_from_fibo_2
+  0608   store [r2] <- r3
+  0611   loadimm r0 <- #fibo
+return_from_fibo_2:
+  0615   loadimm r3 <- #-4
+  0619   sub r2 <- r2 - r3
+  0623   loadimm r3 <- #4
+  0627   sub r3 <- r2 - r3
+  0631   load r10 <- [r3]
+  0634   loadimm r3 <- #4
+  0638   sub r2 <- r2 - r3
+  0642   store [r2] <- r11
+  0645   loadimm r3 <- #1
+  0649   sub r10 <- r10 - r3
+  0653   loadimm r3 <- #4
+  0657   sub r2 <- r2 - r3
+  0661   loadimm r3 <- #return_from_fibo_3
+  0665   store [r2] <- r3
+  0668   loadimm r0 <- #fibo
+return_from_fibo_3:
+  0672   loadimm r3 <- #-4
+  0676   sub r2 <- r2 - r3
+  0680   loadimm r3 <- #4
+  0684   sub r3 <- r2 - r3
+  0688   load r10 <- [r3]
+  0691   sub r11 <- r1 - r11
+  0695   sub r11 <- r10 - r11
+ite_end_3:
+  0699   loadimm r3 <- #-4
+  0703   sub r2 <- r2 - r3
+  0707   loadimm r3 <- #4
+  0711   sub r3 <- r2 - r3
+  0715   load r0 <- [r3]
+print:
+print_loop_1:
+  0718   loadimm r8 <- #ite_then_4
+  0722   move r0 <- r8 if r11 != 0
+  0726   loadimm r0 <- #ite_end_4
+ite_then_4:
+  0730   load r3 <- [r10]
+  0733   out r3
+  0735   loadimm r3 <- #-1
+  0739   sub r10 <- r10 - r3
+  0743   loadimm r3 <- #1
+  0747   sub r11 <- r11 - r3
+  0751   loadimm r0 <- #print_loop_1
+ite_end_4:
+  0755   loadimm r3 <- #-4
+  0759   sub r2 <- r2 - r3
+  0763   loadimm r3 <- #4
+  0767   sub r3 <- r2 - r3
+  0771   load r0 <- [r3]
+str_1:
+  ???? b'I will compute some Fibonacci numbers for you\n'
+str_2:
+  ???? b'fibo('
+str_3:
+  ???? b') = '
+str_4:
+  ???? b'\n'
+str_5:
+  ???? b"I'm done!\n"

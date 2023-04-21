@@ -1,0 +1,111 @@
+  0000   loadimm r2 <- #4096
+  0004   loadimm r3 <- #4
+  0008   sub r2 <- r2 - r3
+  0012   store [r2] <- r10
+  0015   loadimm r3 <- #4
+  0019   sub r2 <- r2 - r3
+  0023   store [r2] <- r11
+  0026   loadimm r10 <- #str_1
+  0030   loadimm r11 <- #37
+  0034   loadimm r3 <- #4
+  0038   sub r2 <- r2 - r3
+  0042   loadimm r3 <- #return_from_print_1
+  0046   store [r2] <- r3
+  0049   loadimm r0 <- #print
+return_from_print_1:
+  0053   loadimm r3 <- #-4
+  0057   sub r2 <- r2 - r3
+  0061   loadimm r3 <- #4
+  0065   sub r3 <- r2 - r3
+  0069   load r11 <- [r3]
+  0072   loadimm r3 <- #-4
+  0076   sub r2 <- r2 - r3
+  0080   loadimm r3 <- #4
+  0084   sub r3 <- r2 - r3
+  0088   load r10 <- [r3]
+loop:
+  0091   loadimm r3 <- #-1
+  0095   sub r7 <- r7 - r3
+  0099   out_number r7
+  0101   loadimm r3 <- #4
+  0105   sub r2 <- r2 - r3
+  0109   store [r2] <- r10
+  0112   loadimm r3 <- #4
+  0116   sub r2 <- r2 - r3
+  0120   store [r2] <- r11
+  0123   loadimm r10 <- #str_2
+  0127   loadimm r11 <- #1
+  0131   loadimm r3 <- #4
+  0135   sub r2 <- r2 - r3
+  0139   loadimm r3 <- #return_from_print_2
+  0143   store [r2] <- r3
+  0146   loadimm r0 <- #print
+return_from_print_2:
+  0150   loadimm r3 <- #-4
+  0154   sub r2 <- r2 - r3
+  0158   loadimm r3 <- #4
+  0162   sub r3 <- r2 - r3
+  0166   load r11 <- [r3]
+  0169   loadimm r3 <- #-4
+  0173   sub r2 <- r2 - r3
+  0177   loadimm r3 <- #4
+  0181   sub r3 <- r2 - r3
+  0185   load r10 <- [r3]
+  0188   loadimm r4 <- #10
+  0192   sub r4 <- r7 - r4
+  0196   loadimm r5 <- #ite_then_1
+  0200   move r0 <- r5 if r4 != 0
+  0204   loadimm r0 <- #ite_end_1
+ite_then_1:
+  0208   loadimm r0 <- #loop
+ite_end_1:
+  0212   loadimm r3 <- #4
+  0216   sub r2 <- r2 - r3
+  0220   store [r2] <- r10
+  0223   loadimm r3 <- #4
+  0227   sub r2 <- r2 - r3
+  0231   store [r2] <- r11
+  0234   loadimm r10 <- #str_3
+  0238   loadimm r11 <- #1
+  0242   loadimm r3 <- #4
+  0246   sub r2 <- r2 - r3
+  0250   loadimm r3 <- #return_from_print_3
+  0254   store [r2] <- r3
+  0257   loadimm r0 <- #print
+return_from_print_3:
+  0261   loadimm r3 <- #-4
+  0265   sub r2 <- r2 - r3
+  0269   loadimm r3 <- #4
+  0273   sub r3 <- r2 - r3
+  0277   load r11 <- [r3]
+  0280   loadimm r3 <- #-4
+  0284   sub r2 <- r2 - r3
+  0288   loadimm r3 <- #4
+  0292   sub r3 <- r2 - r3
+  0296   load r10 <- [r3]
+  0299   exit
+print:
+print_loop_1:
+  0300   loadimm r8 <- #ite_then_2
+  0304   move r0 <- r8 if r11 != 0
+  0308   loadimm r0 <- #ite_end_2
+ite_then_2:
+  0312   load r3 <- [r10]
+  0315   out r3
+  0317   loadimm r3 <- #-1
+  0321   sub r10 <- r10 - r3
+  0325   loadimm r3 <- #1
+  0329   sub r11 <- r11 - r3
+  0333   loadimm r0 <- #print_loop_1
+ite_end_2:
+  0337   loadimm r3 <- #-4
+  0341   sub r2 <- r2 - r3
+  0345   loadimm r3 <- #4
+  0349   sub r3 <- r2 - r3
+  0353   load r0 <- [r3]
+str_1:
+  ???? b'I will count from 1 to 10 (included)\n'
+str_2:
+  ???? b' '
+str_3:
+  ???? b'\n'

@@ -1,0 +1,72 @@
+  0000   loadimm r2 <- #4096
+  0004   loadimm r3 <- #4
+  0008   sub r2 <- r2 - r3
+  0012   loadimm r3 <- #return_from_fibo_1
+  0016   store [r2] <- r3
+  0019   loadimm r0 <- #fibo
+return_from_fibo_1:
+  0023   exit
+fibo:
+  0024   loadimm r8 <- #ite_then_1
+  0028   move r0 <- r8 if r10 != 0
+  0032   loadimm r11 <- #0
+  0036   loadimm r3 <- #-4
+  0040   sub r2 <- r2 - r3
+  0044   loadimm r3 <- #4
+  0048   sub r3 <- r2 - r3
+  0052   load r0 <- [r3]
+  0055   loadimm r0 <- #ite_end_1
+ite_end_1:
+ite_then_1:
+  0059   loadimm r8 <- #1
+  0063   sub r8 <- r10 - r8
+  0067   loadimm r9 <- #ite_then_2
+  0071   move r0 <- r9 if r8 != 0
+  0075   loadimm r11 <- #1
+  0079   loadimm r3 <- #-4
+  0083   sub r2 <- r2 - r3
+  0087   loadimm r3 <- #4
+  0091   sub r3 <- r2 - r3
+  0095   load r0 <- [r3]
+  0098   loadimm r0 <- #ite_end_2
+ite_then_2:
+  0102   loadimm r3 <- #1
+  0106   sub r10 <- r10 - r3
+  0110   loadimm r3 <- #4
+  0114   sub r2 <- r2 - r3
+  0118   store [r2] <- r10
+  0121   loadimm r3 <- #4
+  0125   sub r2 <- r2 - r3
+  0129   loadimm r3 <- #return_from_fibo_2
+  0133   store [r2] <- r3
+  0136   loadimm r0 <- #fibo
+return_from_fibo_2:
+  0140   loadimm r3 <- #-4
+  0144   sub r2 <- r2 - r3
+  0148   loadimm r3 <- #4
+  0152   sub r3 <- r2 - r3
+  0156   load r10 <- [r3]
+  0159   loadimm r3 <- #4
+  0163   sub r2 <- r2 - r3
+  0167   store [r2] <- r11
+  0170   loadimm r3 <- #1
+  0174   sub r10 <- r10 - r3
+  0178   loadimm r3 <- #4
+  0182   sub r2 <- r2 - r3
+  0186   loadimm r3 <- #return_from_fibo_3
+  0190   store [r2] <- r3
+  0193   loadimm r0 <- #fibo
+return_from_fibo_3:
+  0197   loadimm r3 <- #-4
+  0201   sub r2 <- r2 - r3
+  0205   loadimm r3 <- #4
+  0209   sub r3 <- r2 - r3
+  0213   load r10 <- [r3]
+  0216   sub r11 <- r1 - r11
+  0220   sub r11 <- r10 - r11
+ite_end_2:
+  0224   loadimm r3 <- #-4
+  0228   sub r2 <- r2 - r3
+  0232   loadimm r3 <- #4
+  0236   sub r3 <- r2 - r3
+  0240   load r0 <- [r3]

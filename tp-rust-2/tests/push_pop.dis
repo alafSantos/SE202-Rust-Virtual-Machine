@@ -1,0 +1,18 @@
+  0000   loadimm r2 <- #4096
+  0004   loadimm r3 <- #4
+  0008   sub r2 <- r2 - r3
+  0012   store [r2] <- r0
+  0015   loadimm r3 <- #4
+  0019   sub r2 <- r2 - r3
+  0023   store [r2] <- r0
+  0026   loadimm r3 <- #-4
+  0030   sub r2 <- r2 - r3
+  0034   loadimm r3 <- #4
+  0038   sub r3 <- r2 - r3
+  0042   load r1 <- [r3]
+  0045   loadimm r3 <- #-4
+  0049   sub r2 <- r2 - r3
+  0053   loadimm r3 <- #4
+  0057   sub r3 <- r2 - r3
+  0061   load r2 <- [r3]
+  0064   exit

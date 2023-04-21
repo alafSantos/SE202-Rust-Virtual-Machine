@@ -1,0 +1,47 @@
+  0000   loadimm r2 <- #4096
+  0004   loadimm r3 <- #4
+  0008   sub r2 <- r2 - r3
+  0012   store [r2] <- r10
+  0015   loadimm r3 <- #4
+  0019   sub r2 <- r2 - r3
+  0023   store [r2] <- r11
+  0026   loadimm r10 <- #str_1
+  0030   loadimm r11 <- #14
+  0034   loadimm r3 <- #4
+  0038   sub r2 <- r2 - r3
+  0042   loadimm r3 <- #return_from_print_1
+  0046   store [r2] <- r3
+  0049   loadimm r0 <- #print
+return_from_print_1:
+  0053   loadimm r3 <- #-4
+  0057   sub r2 <- r2 - r3
+  0061   loadimm r3 <- #4
+  0065   sub r3 <- r2 - r3
+  0069   load r11 <- [r3]
+  0072   loadimm r3 <- #-4
+  0076   sub r2 <- r2 - r3
+  0080   loadimm r3 <- #4
+  0084   sub r3 <- r2 - r3
+  0088   load r10 <- [r3]
+  0091   exit
+print:
+print_loop_1:
+  0092   loadimm r8 <- #ite_then_1
+  0096   move r0 <- r8 if r11 != 0
+  0100   loadimm r0 <- #ite_end_1
+ite_then_1:
+  0104   load r3 <- [r10]
+  0107   out r3
+  0109   loadimm r3 <- #-1
+  0113   sub r10 <- r10 - r3
+  0117   loadimm r3 <- #1
+  0121   sub r11 <- r11 - r3
+  0125   loadimm r0 <- #print_loop_1
+ite_end_1:
+  0129   loadimm r3 <- #-4
+  0133   sub r2 <- r2 - r3
+  0137   loadimm r3 <- #4
+  0141   sub r3 <- r2 - r3
+  0145   load r0 <- [r3]
+str_1:
+  ???? b'Hello, world!\n'
