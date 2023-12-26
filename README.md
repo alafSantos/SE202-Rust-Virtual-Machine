@@ -15,7 +15,7 @@ For more information, please take a look at the Rust official website: https://w
 ## How to compile and execute the project?
 After installing cargo, you can use the command ***cargo build***, which compiles the project.
 
-For running a Rust programme, you can use the command line ***cargo run examples/name.bin***, replacing "name.bin" by the binary file you want to virtualise.
+For running a Rust programme, you can use the command line ***cargo run examples/name.bin***, replacing "name.bin" with the binary file you want to virtualise.
 
 ## How to Contribute to the Project
 - Any implementation that could lead to a more optimised code for the different methods already designed would be a nice improvement for this project. 
